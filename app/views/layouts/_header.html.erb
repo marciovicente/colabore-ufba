@@ -1,0 +1,16 @@
+<nav class="nav-dark">
+  <div class="container">
+    <div class="nav-wrapper">
+      <%= link_to(root_path, :class => "brand-logo") do %>
+        Denuncie UFBA! <img class="brand-logo-img" src="/assets/bullhorn.png"/>
+      <% end %>
+      <ul id="nav-mobile" class="right side-nav">
+        <li><%= link_to "Nova Denúncia", controller: "reports", action: "new" %></li>
+        <li><%= link_to "Sobre", controller: "global", action: "about" %></li>
+        <li><%= link_to "Denúncias Frequentes", controller: "global", action: "about" %></li>
+        <li><a href="sass.html"><i class="mdi-action-search"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

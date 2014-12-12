@@ -1,0 +1,2 @@
+module TypeReportsHelper
+end

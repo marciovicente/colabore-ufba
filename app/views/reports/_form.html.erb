@@ -1,0 +1,43 @@
+<div class="row">
+  <%= form_for(@report, html: {class: "col s12"}) do |f| %>
+    <% if @report.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+        <ul>
+        <% @report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :student %>
+        <label for="report[student]">Seu nome</label>
+      </div>
+      <div class="input-field col s6">
+        <%= f.text_field :title %>
+        <%= f.label :title %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.text_field :image %>
+    </div>
+    <div class="field">
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :report_type %>
+      <%= f.number_field :report_type %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

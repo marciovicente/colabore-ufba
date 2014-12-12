@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Denuncie UFBA - Você pode ajudar a melhorar a UFBA</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="icon" href="/assets/favicon.ico">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render "layouts/header" %>
+<%= yield %>
+<%= render "layouts/float_button" %>
+
+</body>
+</html>

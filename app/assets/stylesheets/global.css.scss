@@ -1,0 +1,45 @@
+// #TODO - Add this path after in variables include
+$redDefault: #EA454B;
+$greenDefault: #5BD999;
+
+// #TODO - Add this path after in reset file
+.floating-right-bottom {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.container {
+  &.inner {
+    margin-top: 20px;
+  }
+}
+.nav-dark {
+  background: #495563;
+  border-top: 3px solid $greenDefault;
+  li {
+    &:hover {
+      background: rgba(0,0,0,.25);
+      a { color: $greenDefault; }
+    }
+  }
+}
+
+.btn-facebook {
+  &, &:hover {
+    background-color: #486DAB;
+  }
+}
+
+
+
+
+
+
+
+.brand-logo {}
+  .brand-logo-img {
+    width: 30px;
+    position: relative;
+    top: 1px;
+  }
