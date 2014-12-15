@@ -1,14 +1,23 @@
 <div class="container inner">
   <p id="notice"><%= notice %></p>
 
-  <h1><%= @report.student %></h1>
+  <div class="row">
+    <div class="col s8">
+      <h1 class="title"><%= @report.title %></h1>
+      <h2 class="sr-author">Denúncia feita por <strong><%= @report.student %></strong></h2>
+      <p class="sr-description"><%= @report.description %></p>
+      <div class="sr-social-share">
+        <a href="http://www.facebook.com/share.php?u=<%=u request.original_url %>" class="waves-effect waves-light btn btn-facebook">Compartilhar</a>
+        <button class="waves-effect waves-light btn btn-twitter">Tweet</button>
+      </div>
+      <div class="sr-social-comment">
+        <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5" data-colorscheme="light"></div>
+      </div>
+    </div>
 
-    <%= @report.description %>
-
-    <%= @report.image %>
-
-    <%= @report.title %>
-
-  <p>
-  </p>
+    <div class="col s4">
+      <img src="http://photos-d.ak.instagram.com/hphotos-ak-xap1/1723936_1421484038096571_67313838_n.jpg" width="300" height="300" alt="<%= @report.image %>" class="sr-image">
+      <%# <%= @report.image %1> %>
+    </div>
+  </div>
 </div>
