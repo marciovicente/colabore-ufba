@@ -1,0 +1,22 @@
+<div class="container inner">
+  <h1 class="title"><%= @page_title || "Últimas denúncias" %></h1>
+  <div class="row">
+    <div class="col s12">
+      <% @reports.each do |r| %>
+        <div class="col s4">
+          <div class="card small">
+            <div class="card-image semi-opacity">
+              <img src="http://photos-d.ak.instagram.com/hphotos-ak-xap1/1723936_1421484038096571_67313838_n.jpg">
+              <span class="card-title"><%= r['title'] %></span>
+            </div>
+            <div class="card-content">
+              <p><%= r['description'] %></p>
+            </div>
+            <div class="card-action">
+              <%= link_to "Ver detalhes", r  %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
