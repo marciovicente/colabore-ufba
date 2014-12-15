@@ -242,6 +242,10 @@ textarea {
 button {
   overflow: visible;
 }
+button:focus,
+button:active {
+  outline: none;
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -7464,7 +7468,10 @@ form p:last-child {
 select {
   display: none;
 }
-
+select:active,
+select:focus {
+  outline: none;
+}
 select.disabled {
   display: block;
 }
