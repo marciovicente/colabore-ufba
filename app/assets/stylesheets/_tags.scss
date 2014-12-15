@@ -1,0 +1,25 @@
+$green: #64BA3A;
+$red: #E84E40;
+
+
+.tag {
+  padding: 3px 5px;
+  font-size: 11px;
+  background: #ccc;
+  color: #666;
+  border-radius: 3px;
+  &.right {
+    float: right;
+  }
+  &.current {
+    background: $green;
+    color: #fff;
+  }
+  &.rejected {
+    background: $red;
+    color: #fff;
+  }
+  &.active {
+    color: #fff !important;
+  }
+}
