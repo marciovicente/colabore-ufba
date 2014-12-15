@@ -19,10 +19,64 @@
     text-align: center;
     color: #fff;
     font-size: 3em;
-    max-width: 60%;
+    max-width: 45%;
     font-weight: 300;
   }
-  .rip-btn-fb {
+  .rip-main-button {
     display: table;
     margin: 50px auto;
+    .btn-green {
+      margin-left: 15px;
+    }
   }
+.rip-content {}
+  .rip-subtitle {
+    text-align: center;
+  }
+  .rip-content-box {
+    padding: 0 1rem;
+  }
+    .rip-content-title {
+      font-size: 1.5em;
+      line-height: 25px;
+      text-align: center;
+    }
+    .rip-content-text {
+      text-align: center;
+    }
+  .rip-content-button {
+    margin: 20px auto;
+    display: table;
+  }
+
+.sr-author {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 14px;
+  color: #999;
+}
+.sr-social-share {
+  margin-top: 20px;
+  .btn-twitter {
+    margin-left: 10px;
+  }
+}
+.sr-description {
+  max-width: 90%;
+}
+.sr-social-comment {
+  margin-top: 25px;
+}
+.sr-image {
+  max-width:100% !important;
+  height:auto;
+  display:block;
+}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+

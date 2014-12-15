@@ -2,13 +2,20 @@
   <div class="container">
     <div class="nav-wrapper">
       <%= link_to(root_path, :class => "brand-logo") do %>
-        Denuncie UFBA! <img class="brand-logo-img" src="/assets/bullhorn.png"/>
+        Colabore UFBA! <img class="brand-logo-img" src="/assets/bullhorn.png"/>
       <% end %>
       <ul id="nav-mobile" class="right side-nav">
         <li><%= link_to "Nova Denúncia", controller: "reports", action: "new" %></li>
+        <li><%= link_to "Últimas Denúncias", controller: "reports", action: "list" %></li>
         <li><%= link_to "Sobre", controller: "global", action: "about" %></li>
-        <li><%= link_to "Denúncias Frequentes", controller: "global", action: "about" %></li>
-        <li><a href="sass.html"><i class="mdi-action-search"></i></a></li>
+        <li><%= link_to "Como funciona?", root_path(anchor: "how-works") %></li>
+        <li class="search-list-item">
+        <a class="search-button"><i class="mdi-action-search"></i></a>
+          <form class="search-form hide">
+            <input type="search" class="search-form-field" placeholder="O que você procura?">
+            <input class="search-form-action" value="Ok" type="submit">
+          </form>
+        </li>
       </ul>
     </div>
   </div>
