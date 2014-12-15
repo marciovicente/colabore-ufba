@@ -1,17 +1,43 @@
 <div class="rip-box-wrapper">
-  <h1 class="rip-box-title">Compartilhe os problemas que só você vivencia na UFBA</h1>
+  <h1 class="rip-box-title">Colabore para tornar a UFBA um lugar melhor</h1>
 
-  <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-facebook rip-btn-fb" do %>
-    Entrar com Facebook
-  <% end %>
+  <div class="rip-main-button">
+    <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-facebook rip-btn-fb" do %>
+      Entrar com Facebook
+    <% end %>
+    <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-green" do %>
+      Nova denúncia <i class="mdi-content-add right"></i>
+    <% end %>
+  </div>
 </div>
 
 <div class="container inner">
-  <div class="rip-content">
-    <h2>Como funciona?</h2>
+  <div class="rip-content row" id="how-works">
+    <h2 class="subtitle rip-subtitle">Como funciona?</h2>
+    <div class="col s4 rip-content-box">
+      <h3 class="rip-content-title">Encontrou um problema?</h3>
+      <p class="rip-content-text">Não vivemos em um mundo perfeito (infelizmente), 
+      a nossa universidade está rodeada de problemas. O professor está "mangueando"?
+      Nunca é feita a coleta na lixeira do PAF? Aquele buraco no estacionamento já tem
+      três anos? Então, por que não denunciar isso?</p>
+    </div>
+
+    <div class="col s4 rip-content-box">
+      <h3 class="rip-content-title">Como resolveremos esse problema?</h3>
+      <p class="rip-content-text">Bom, não resolveremos, pelo menos não diretamente!
+      Mas com essa mobilização social podemos cobrar mais aos gestores da nossa tão querida
+      universidade.</p>
+    </div>
+
+    <div class="col s4 rip-content-box">
+      <h3 class="rip-content-title">Quanto mais melhor!</h3>
+      <p class="rip-content-text">Quanto mais denúncias, compartilhamentos, ou visualizações
+      tivermos, mais força teremos para cobrar e resolver esses problemas. Juntos podemos
+      tornar a UFBA um local melhor!</p>
+    </div>
   </div>
 
-  <%= link_to new_report_path, :class => "waves-effect waves-light btn" do %>
+  <%= link_to new_report_path, :class => "waves-effect waves-light btn btn-green rip-content-button" do %>
     Nova denúncia <i class="mdi-content-add right"></i>
   <% end %>
 </div>
