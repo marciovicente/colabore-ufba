@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_for(@report, html: {class: "col s12"}) do |f| %>
+  <%= simple_form_for(@report, html: {class: "col s12"}) do |f| %>
     <% if @report.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
