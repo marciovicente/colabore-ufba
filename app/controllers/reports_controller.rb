@@ -7,6 +7,17 @@ class ReportsController < ApplicationController
     @reports = Report.all
   end
 
+  def list
+    if params[:query]
+      sql_query = Report.where("title like :q or description like :q", :q => "%#{params[:query]}%").to_sql
+      @reports = ActiveRecord::Base.connection.exec_query(sql_query)
+      @page_title = "Exibindo resultados para: #{params[:query]}"
+      puts @reports, '*'*100
+      return true
+    end
+    @reports = Report.all
+  end
+
   # GET /reports/1
   # GET /reports/1.json
   def show
