@@ -1,0 +1,26 @@
+##############################
+# Configurações Padrão
+##############################
+common: &common
+  adapter: postgresql
+  username: usuer_postgres
+  password: 123456
+  host: localhost
+  encode: utf8
+  database: colabore_ufba_dev
+
+development:
+  <<: *common
+  database: colabore_ufba_dev
+
+production:
+  adapter: postgresql
+  username: user_psql
+  password: 123456
+  encode: utf8
+  database: colabore_ufba_production
+
+test: &test
+  <<: *common
+  database: colabore_ufba_test
+
