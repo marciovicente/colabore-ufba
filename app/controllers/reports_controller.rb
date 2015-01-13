@@ -25,6 +25,9 @@ class ReportsController < ApplicationController
 
   # GET /reports/new
   def new
+    if !user_signed_in?
+      redirect_to user_omniauth_authorize_path(:facebook)
+    end
     @report = Report.new
   end
 
