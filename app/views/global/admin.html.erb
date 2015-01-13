@@ -1,0 +1,21 @@
+<div class="container inner">
+  <h1 class="title">Área Administrativa</h1>
+
+    <ul class="collection">
+      <% @reports.each_with_index do |report, index| %>
+        <li class="collection-item">
+        <%= link_to report.title, report %>
+          <% if index == 1 %>
+            <span class="tag current right">Em andamento</span>
+          <% elsif index == 2 %>
+            <span class="tag rejected right">Rejeitada</span>
+          <% elsif index == 3 %>
+            <span class="tag active right">Resolvida</span>
+          <% else %>
+            <span class="tag right">Recebida</span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+</div>
+
