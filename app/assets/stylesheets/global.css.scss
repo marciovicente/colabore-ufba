@@ -29,22 +29,84 @@ $greenDefault: #43C885;
     }
   }
 }
+.nav-menu-logged {
+  position: relative;
+  left: 40px;
+}
+  .logged-header-menu {
+    display: inline-block;
+    max-height: 56px;
+    background: rgba(0, 0, 0, .2);
+    padding: 0 20px;
+  }
+    .lgd-header-name {
+      display: inline-block;
+      color: #fff;
+    }
+
+.footer {
+  width: 100%;
+  padding: 5px 0;
+  background: rgba(0,0,0,.2);
+  text-align: center;
+}
 
 .btn-facebook {
   &, &:hover {
     background-color: #486DAB;
   }
 }
-
-
-
-
-
-
-
+.btn-twitter {
+  &, &:hover { background-color: #55ACEE; }
+}
+.btn-green {
+  &, &:hover {
+    background-color: $greenDefault;
+  }
+}
+.title {
+  font-size: 2.5em;
+  line-height: 1.2em;
+  color: #4f4f4f;
+}
+.subtitle {
+  font-size: 2.5em;
+}
 .brand-logo {}
   .brand-logo-img {
     width: 30px;
     position: relative;
     top: 1px;
+  }
+
+.semi-opacity {
+  background-color: rgba(0,0,0,.7);
+}
+.hide {
+  display: none;
+}
+
+.search-form {
+  width: 250px;
+  position: absolute;
+  margin: -73px 0 0 0px;
+}
+  .search-form-field {
+    border: 0;
+    padding: 6px 2px 6px 5px;
+    border-radius: 2px;
+    color: #333;
+    display: inline-block;
+    &:focus {
+      outline: none;
+    }
+  }
+  .search-form-action {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background-color: $greenDefault;
+    padding: 6px;
+    margin-left: -6px;
+    border-radius: 0 3px 3px 0;
   }
