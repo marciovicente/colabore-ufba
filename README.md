@@ -70,6 +70,10 @@ Login com Facebook
 ------
 O login com facebook só funcionará em modo de desenvolvimento se o seu usuário estiver cadastrado como beta tester. Então [solicite a permissão](mailto:marciovicente.filho@gmail.com).
 
+Screenshot
+--
+![Colabore UFBA! Screenshot](http://cl.ly/ZINS/Image%202015-01-13%20at%206.28.28%20PM.png)
+
 [Contato/Sugestões/Dúvidas](mailto:marciovicente.filho@gmail.com)
 
 
