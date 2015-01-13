@@ -38,6 +38,7 @@ Não vivemos em um mundo perfeito (infelizmente), a nossa universidade está rod
 Considerando que todas as dependências do projeto já estão instaladas e você está na raiz do projeto:
 
 1) Instalar gem's do projeto
+
 ```bundle install```
 
 2) Configurar database.yml
