@@ -1,4 +1,4 @@
-**Colabore UFBA!**
+**Colabore UFBA!** ![Colabore UFBA Bulhorn!](https://raw.githubusercontent.com/marciovicente/colabore-ufba/master/app/assets/images/bullhorn.png?token=AA-XzZSw8YfP8znk1IvYShIzXbi1LWLuks5UvsPRwA%3D%3D)
 ==================
 
 Não vivemos em um mundo perfeito (infelizmente), a nossa universidade está rodeada de problemas. O professor está "mangueando"? Nunca é feita a coleta na lixeira do PAF? Aquele buraco no estacionamento já tem três anos? Então, por que não denunciar isso?
