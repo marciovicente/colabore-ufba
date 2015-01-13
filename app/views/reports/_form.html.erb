@@ -13,31 +13,43 @@
     <% end %>
 
     <div class="row">
-      <div class="input-field col s6">
-        <%= f.text_field :student %>
-        <label for="report[student]">Seu nome</label>
-      </div>
-      <div class="input-field col s6">
-        <%= f.text_field :title %>
-        <%= f.label :title %>
+      <%= f.text_field :title, :class => "col s8", :placeholder => "Seu nome" %>
+    </div>
+    <div class="row">
+      <%= f.text_field :student, :class => "input-field col s8", :placeholder => "Dê um título para denúncia" %>
+    </div>
+
+    <div class="row">
+      <div class="col s8">
+        <select name="report[report_type]">
+          <option disabled selected>Escolha o tipo de denúncia</option>
+          <option value="1">Falta de Material (Equipamentos, suprimentos, etc)</option>
+          <option value="2">Professor</option>
+          <option value="3">Denunciar funcionário</option>
+          <option value="4">Falta de Limpeza</option>
+          <option value="5">Problema de infraestrutura</option>
+        </select>
       </div>
     </div>
-    <div class="field">
-      <%= f.label :image %>
-      <%= f.text_field :image %>
+
+    <div class="row">
+      <div class="col s8">
+        <label class="">Anexe uma imagem (opcional)</label>
+        <br/>
+        <%# <%= f.file_field :image %1> %>
+        <button class="waves-effect waves-light btn"><i class="mdi-image-photo left"></i> Escolher imagem</button>
+      </div>
     </div>
-    <div class="field">
-      <div class="field">
-        <%= f.label :description %>
+
+    <div class="row">
+      <div class="col s8">
+        <label for="report_description">Descreva com detalhes a sua denúncia</label>
         <%= f.text_area :description %>
       </div>
     </div>
-    <div class="field">
-      <%= f.label :report_type %>
-      <%= f.number_field :report_type %>
-    </div>
+
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Registrar denúncia", :class => "btn btn-green" %>
     </div>
   <% end %>
 </div>
