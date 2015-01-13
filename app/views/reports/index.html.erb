@@ -2,12 +2,17 @@
   <h1 class="rip-box-title">Colabore para tornar a UFBA um lugar melhor</h1>
 
   <div class="rip-main-button">
-    <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-facebook rip-btn-fb" do %>
-      Entrar com Facebook
+    <% if !user_signed_in? %>
+      <%= link_to user_omniauth_authorize_path(:facebook), :class => "waves-effect waves-light btn-large btn-facebook rip-btn-fb" do %>
+        Entrar com Facebook
+      <% end %>
+    <% else %>
+      <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-green" do %>
+        Nova denúncia <i class="mdi-content-add right"></i>
+      <% end %>
     <% end %>
-    <%= link_to new_report_path, :class => "waves-effect waves-light btn-large btn-green" do %>
-      Nova denúncia <i class="mdi-content-add right"></i>
-    <% end %>
+    <% link_to "Sign up", new_user_registration_path %> or
+    <% link_to "Sign in", new_user_session_path %>
   </div>
 </div>
 
