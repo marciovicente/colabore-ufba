@@ -1,22 +1,24 @@
 <nav class="nav-dark">
   <div class="container">
-    <div class="nav-wrapper">
-      <%= link_to(root_path, :class => "brand-logo") do %>
-        Colabore UFBA! <img class="brand-logo-img" src="/assets/bullhorn.png"/>
+    <div class="nav-wrapper row">
+      <% col_size = user_signed_in? ? ['s1', 's9'] : ['s4', 's8'] %>
+      <%= link_to(root_path, :class => "brand-logo col #{col_size[0]}") do %>
+        <% if !user_signed_in? %> Colabore UFBA! <% end %> <img class="brand-logo-img" src="/assets/bullhorn.png"/>
       <% end %>
-      <ul id="nav-mobile" class="right side-nav">
-        <li><%= link_to "Nova Denúncia", controller: "reports", action: "new" %></li>
+      <ul id="nav-mobile" class="<%= !user_signed_in? ? 'right' : 'left nav-menu-logged' %> col #{col_size[0]} side-nav">
+        <li><%= link_to "Nova Denúncia", new_report_path %></li>
         <li><%= link_to "Últimas Denúncias", controller: "reports", action: "list" %></li>
         <li><%= link_to "Sobre", controller: "global", action: "about" %></li>
         <li><%= link_to "Como funciona?", root_path(anchor: "how-works") %></li>
         <li class="search-list-item">
-        <a class="search-button"><i class="mdi-action-search"></i></a>
+          <a class="search-button"><i class="mdi-action-search"></i></a>
           <form class="search-form hide">
             <input type="search" class="search-form-field" placeholder="O que você procura?">
             <input class="search-form-action" value="Ok" type="submit">
           </form>
         </li>
       </ul>
+      <%= render "layouts/logged" %>
     </div>
   </div>
 </nav>

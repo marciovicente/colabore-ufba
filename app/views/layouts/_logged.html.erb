@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+  <div class="logged-header-menu col s3">
+    <% if current_user.image %>
+      <img src="<%= current_user.image %>" class="lgd-fb-avatar" alt="">
+    <% else %>
+      <span class="lgd-avatar-mini va-m"></span>
+    <% end %>
+    Olá, <p class="lgd-header-name"><%= current_user.name %></p>
+    <%= link_to destroy_user_session_path, :method => :delete do %>
+      <i class="mdi-action-launch lgd-button-signout"></i>
+    <% end %>
+  </div>
+<% end %>
+
