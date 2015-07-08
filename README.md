@@ -19,7 +19,7 @@ Não vivemos em um mundo perfeito (infelizmente), a nossa universidade está rod
 
 - Fork o projeto
 - Clone em sua máquina o repositório que você acabou de dar fork
-- Adicione o projeto original como upstream `git remote add https://github.com/marciovicente/colabore-ufba`
+- Adicione o projeto original como upstream `git remote add upstream https://github.com/marciovicente/colabore-ufba`
 - `git fetch upstream`
 - `git merge upstream/master`
 - Crie uma branch: `git checkout -b your_branch_name`
